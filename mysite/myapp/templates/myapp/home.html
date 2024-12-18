@@ -1,0 +1,11 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}Strona Główna{% endblock %}
+
+{% block content %}
+    <h1>Witamy w Pizzerii Skibidi!</h1>
+    <p>Najlepsza pizza w mieście z najświeższych składników!</p>
+    <div class="image-placeholder">
+        <img src="{% static 'images/pizza_home.jpg' %}" alt="Nasza pizza">
+    </div>
+{% endblock %}

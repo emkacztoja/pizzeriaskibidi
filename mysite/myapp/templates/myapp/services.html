@@ -1,0 +1,16 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}Nasze Menu{% endblock %}
+
+{% block content %}
+    <h1>Nasze Menu</h1>
+    <div class="image-placeholder">
+        <img src="{% static 'images/pizza_menu.jpg' %}" alt="Nasze menu">
+    </div>
+    {% for service in services %}
+        <div class="service-item">
+            <h2>{{ service.name }}</h2>
+            <p>{{ service.description }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

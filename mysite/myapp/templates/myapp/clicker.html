@@ -1,0 +1,13 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}Zamówienia{% endblock %}
+
+{% block content %}
+    <h1>Złóż Zamówienie</h1>
+    <button id="click-button">Zamów Pizzę</button>
+    <p>Liczba zamówień: <span id="click-count">0</span></p>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'js/clicker.js' %}"></script>
+{% endblock %}

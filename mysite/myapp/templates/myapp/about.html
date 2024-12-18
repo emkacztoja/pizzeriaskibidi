@@ -1,0 +1,12 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block title %}O Nas{% endblock %}
+
+{% block content %}
+    <h1>O Naszej Pizzerii</h1>
+    <p>Pizzeria Skibidi to miejsce, gdzie tradycja spotyka nowoczesność.</p>
+    <div class="image-placeholder">
+        <img src="{% static 'images/pizzeria.jpg' %}" alt="Nasza pizzeria">
+    </div>
+    <p>Nasze pizze przygotowywane są z najświeższych składników i z pasją!</p>
+{% endblock %}
