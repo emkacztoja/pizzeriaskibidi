@@ -1,0 +1,203 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: $background-color;
+    color: $text-color;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    background-color: $primary-color;
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        li {
+            margin: 0.5em;
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                padding: 0.5em 1em;
+                display: inline-block;
+                border-radius: 4px;
+                transition: background-color 0.3s, transform 0.2s;
+
+                &:hover {
+                    background-color: $hover-primary-color;
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
+
+.container {
+    padding: 2em;
+    background-color: $container-bg-color;
+    margin: 2em auto;
+    max-width: 800px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    flex: 1;
+    text-align: center;
+}
+
+h1 {
+    color: $heading-color;
+    text-align: center;
+}
+
+button {
+    padding: 0.75em 1.5em;
+    background-color: $secondary-color;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
+
+    &:hover {
+        background-color: $hover-secondary-color;
+        transform: scale(1.05);
+    }
+
+    &:active {
+        background-color: $active-secondary-color;
+        transform: scale(1);
+    }
+}
+
+#click-button {
+    font-size: 1.2em;
+    margin: 1em 0;
+}
+
+.service-item {
+    padding: 1em;
+    border-bottom: 1px solid $border-color;
+    margin-bottom: 1em;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    h2 {
+        color: $service-heading-color;
+    }
+
+    p {
+        font-size: 1em;
+        color: #555;
+    }
+}
+
+.calculator {
+    width: 100%;
+    max-width: 320px;
+    margin: 2em auto;
+    padding: 1em;
+    background-color: $calculator-bg-color;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    .display {
+        width: 90%;
+        height: 2.5em;
+        background-color: white;
+        border: 1px solid $border-color;
+        margin-bottom: 1em;
+        padding: 0.5em;
+        font-size: 2em;
+        text-align: right;
+        border-radius: 4px;
+        box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5em;
+
+        button {
+            padding: 1em;
+            background-color: $primary-color;
+            color: white;
+            border: none;
+            font-size: 1.5em;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+
+            &:hover {
+                background-color: $hover-primary-color;
+                transform: scale(1.05);
+            }
+
+            &:nth-child(4n) {
+                background-color: $secondary-color;
+
+                &:hover {
+                    background-color: $hover-secondary-color;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: $primary-color;
+    color: white;
+    margin-top: auto;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav .menu {
+        flex-direction: column;
+        width: 100%;
+
+        li {
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    .container {
+        padding: 1em;
+        margin: 1em;
+    }
+
+    .calculator {
+        width: 90%;
+    }
+}
